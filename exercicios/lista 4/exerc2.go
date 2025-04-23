@@ -11,16 +11,12 @@ func main() {
 	vetorRA := make([]int, 0)
 	vetorRB := make([]int, 0)
 
-	j := 0
-	k := 0
 	for i := 0; i < 10; i++ {
 		if vetorA[i]%2 == 0 {
 			vetorRA = append(vetorRA, vetorA[i])
-			j++
 
 		} else {
 			vetorRB = append(vetorRB, vetorA[i])
-			k++
 		}
 	}
 
