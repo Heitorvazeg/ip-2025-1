@@ -144,6 +144,10 @@ button {
     margin: 10px;
     padding: 5px;
     text-align: center;
+    color: black;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .formulario {
