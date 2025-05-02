@@ -1,10 +1,16 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
 )
 
 func main() {
-	fileserver := http.Serverfile(http.dir(""))
+	fileserver := http.FileServer(http.Dir("../static"))
+
+	http.Handle("/", fileserver)
+
+	if err := http.ListenAndServe(":8081", fileserver); err != nil {
+		log.Fatal(err)
+	}
 }
